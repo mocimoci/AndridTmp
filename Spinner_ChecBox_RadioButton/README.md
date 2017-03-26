@@ -11,7 +11,7 @@ XML は、ExtensibleMarkupLanguage の略であり、
 
 
 
-#### Spinner
+#### スピナーが選択された時の処理
 ~~~java
 spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
     @Override
