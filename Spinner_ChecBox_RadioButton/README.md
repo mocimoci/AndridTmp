@@ -1,4 +1,4 @@
-# Spinner ChecBox RadioButton
+# Spinner, ChecBox, RadioButton
 
 レイアウトとは、複数のウィジェットをまとめたり、どのように配置すべきかを決める為のビューです。
 
