@@ -149,13 +149,17 @@ layout.addView(radioGroup);
 
 
 //（３）ボタンが押されたら判定する ------------------------------
-//一問目回答
-if (radioGroup.getCheckedRadioButtonId() == 1) {
-    //正解
-    MessageDialog.show(this, "クイズ問題１", "正解です");
-} else {
-    //不正解
-    MessageDialog.show(this, "クイズ問題１", "不正解です");
+public void onClick(View v) {
+    //一問目回答
+    if (radioGroup.getCheckedRadioButtonId() == 1) {
+        //正解
+        Log.d("onClick", String.valueOf("正解"));
+        MessageDialog.show(this, "クイズ問題１", "正解です");
+    } else {
+        //不正解
+        Log.d("onClick", String.valueOf("不正解"));
+        MessageDialog.show(this, "クイズ問題１", "不正解です");
+    }
 }
 ~~~
 
