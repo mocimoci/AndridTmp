@@ -22,8 +22,14 @@ XML は、ExtensibleMarkupLanguage の略であり、
 
 
 #### ウィジェットのサイズの指定方法
-- wrap_content コンテンツのサイズに合わせてウィジェットのサイズが決まります。例えば、テキストビューであれば表示するテキストの内容で幅が決まります。
-- fill_parent,match_parent 親要素いっぱいにウィジェットのサイズが拡がります。たとえば、横幅が fill_parent が設定されている LinearLayoutの入れ子として、横幅が fill_parent が設定されているテキストビューを記述した場合、画面幅いっぱいにテキストビューが表示されます。
+	wrap_content 
+		コンテンツのサイズに合わせてウィジェットのサイズが決まります。
+		例えば、テキストビューであれば表示するテキストの内容で幅が決まります。
+	fill_parent,match_parent 
+		親要素いっぱいにウィジェットのサイズが拡がります。
+		たとえば、横幅が fill_parent が設定されている LinearLayoutの入れ子として、
+		横幅が fill_parent が設定されているテキストビューを記述した場合、
+		画面幅いっぱいにテキストビューが表示されます。
 
 
 #### android:layout_gravity 属性の設定値
