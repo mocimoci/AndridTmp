@@ -11,12 +11,12 @@ private android.widget.Spinner spinner;//スピナー
 
 //（２）中身を作る -----------------------------------------
 //スピナーの生成
-ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-        this, android.R.layout.simple_spinner_item);
-adapter.setDropDownViewResource(
-        android.R.layout.simple_spinner_dropdown_item
-);
+ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
+        
+//アダプター
+adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+//項目
 String[] strs = {"赤", "青", "黄"};
 for (int i = 0; i < strs.length; i++) {
     adapter.add(strs[i]);
