@@ -33,7 +33,7 @@ public void onClick(View v) {
 
     //スピナーの状態取得
     String selectedSpinner = (String) spinner.getSelectedItem();
-    Log.d("onClick", String.valueOf("selectedSpinner:" + selectedSpinner));
+    
     if (selectedSpinner.equals("赤")) {
         layout.setBackgroundColor(Color.RED);
     } else if (selectedSpinner.equals("青")) {
@@ -52,7 +52,6 @@ spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
         
         // 選択されたアイテムを取得します
         String item = (String) spinner.getSelectedItem();
-        Log.d("item:",String.valueOf(item));
 
     }
     @Override
@@ -153,11 +152,9 @@ public void onClick(View v) {
     //一問目回答
     if (radioGroup.getCheckedRadioButtonId() == 1) {
         //正解
-        Log.d("onClick", String.valueOf("正解"));
         MessageDialog.show(this, "クイズ問題１", "正解です");
     } else {
         //不正解
-        Log.d("onClick", String.valueOf("不正解"));
         MessageDialog.show(this, "クイズ問題１", "不正解です");
     }
 }
