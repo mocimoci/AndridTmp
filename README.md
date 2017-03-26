@@ -5,8 +5,75 @@ Androidプログラミングの色々
 #### 関連サイト
 [Android Developers：リファレンス](https://developer.android.com/reference/packages.html?hl=ja)
 
-#### Layout
-各種レイアウト
+#### XML Layout
+- AllLayout
+- Frame
+- Grid
+- Linear
+- Ralative
+- Table
 
+#### String
+#### Graphics
+#### Image
+#### KeyEvent
+#### TouceEvent
+#### GestureEvent
+#### SurfaceView
+
+#### TextView
+#### Button, Dialog
 #### Spinner_ChecBox_RadioButton
-チェックボックスとかスピナーとか
+- ChecBox
+- RadioButton
+- Spinner
+#### CheckBox
+#### EditText
+#### WebView
+#### MapView
+#### ActionBar
+#### ListView, GridView, ViewPager
+
+#### File
+#### SQLite
+#### Preferences
+#### Clipboard
+
+#### Activity
+#### MyActivity
+#### BroadcastReceiver
+#### Service
+#### FileProvider
+#### DBProvider
+#### Fragment
+
+#### Http
+#### Socket
+#### Bluetooth, WiFiDirect
+#### NFC
+#### AndroidBeam
+#### GoogleCloudMessaging
+
+#### Sensor
+#### Location
+#### Camera
+#### Home
+#### AppWidget
+#### LiveWallpaper
+#### Dream, Screensaver
+#### USB
+#### InApp
+
+#### MediaPlayer
+#### VideoView
+#### RecognizeSpeech
+#### TextToSpeech
+#### ViewAnimation
+#### PropertyAnimation
+#### LaunchAnimation
+
+#### PuzzleGame
+#### ActionGame
+#### ShootingGame
+#### RPG
+#### TwitterClient
