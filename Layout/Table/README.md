@@ -1,24 +1,25 @@
-# AndroidLayout
+# TableLayout
 
-レイアウトとは、複数のウィジェットをまとめたり、どのように配置すべきかを決める為のビューです。
-
-### XML
-XML は、ExtensibleMarkupLanguage の略であり、
-インターネット上で様々なデータを扱う場合に特に利点を発揮します。
-１９９８年に W３C により勧告された比較的新しい言語ですが、
-仕様が簡単であるため、広く使用されるようになりました。
+TableLayout はウィジェットをテーブル(格子) 状に配置する為のレイアウトです。
 
 
-
-
-#### レイアウトの種類と概要
-	LinearLayout ウィジェットを縦/横一列に配置
-	RelativeLayout ウィジェットの位置を前後の相対位置を指定
-	AbsoluteLayout ウィジェットの位置を絶対座標で指定
-	TableLayout ウィジェットをテーブル(格子)状に配置
-	GridLayout ウィジェットをテーブル(格子)状に配置
-	FrameLayout ウィジェットを左上に重ねて配置
-
+### 基本形
+	TableLayout
+		 TableRow
+		 	 TextVie /
+		 	 TextVie /
+		 	 TextVie /
+		 /TableRow
+		 TableRow
+		 	 TextVie /
+		 	 TextVie /
+		 	 TextVie /
+		 TableRow
+		 	 TextVie /
+		 	 TextVie /
+		 	 TextVie /
+		 /TableRow
+	/TableLayout
 
 
 #### ウィジェットのサイズの指定方法
