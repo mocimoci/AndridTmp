@@ -1,31 +1,43 @@
 package bb_brain.net.measuringapp;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.graphics.Color;
+import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Calendar;
 
 /*
 *
-*計量アプリ
+*スピナーを使って「赤」、「青」、「黄」、「緑」、「ピンク」、「オレンジ」の色を表示して、
+* 選択された色で背景色を描画
 *
 */
-public class MeasuringappMain extends Activity implements View.OnClickListener {
+public class MeasuringappMain2 extends Activity implements View.OnClickListener {
 
     private final static int WC = LinearLayout.LayoutParams.WRAP_CONTENT;
+    private final static int MP = LinearLayout.LayoutParams.MATCH_PARENT;
+
     private final static String BR = System.getProperty("line.separator");
     private android.widget.Spinner spinner;//スピナー
     private Button button;//ボタン
-    LinearLayout layout;
+    LinearLayout layout,layout2,layout3,layout4;
     TextView textView;
     TextView textView2;
     EditText edittext;
@@ -43,12 +55,30 @@ public class MeasuringappMain extends Activity implements View.OnClickListener {
         layout.setOrientation(LinearLayout.VERTICAL);
         setContentView(layout);
 
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(MP,WC);
+
+        LinearLayout.LayoutParams params1 = new LinearLayout.LayoutParams(WC,WC);
+        params1.weight = 1.0f;
+
+
+        LinearLayout.LayoutParams params2 = new LinearLayout.LayoutParams(WC,WC);
+        params2.weight = 3.0f;
+
+        //レイアウトの生成
+        layout2 = new LinearLayout(this);
+        layout2.setBackgroundColor(Color.WHITE);
+        layout2.setOrientation(LinearLayout.HORIZONTAL);
+        layout.addView(layout2,params);
+
+
         //料理の名前は？
         textView = new TextView(this);
         textView.setText("料理の名前は？");
         textView.setTextSize(28.0f);
         textView.setTextColor(Color.rgb(0, 0, 0));
-        layout.addView(textView);
+        textView.setTextSize(15);
+        layout2.addView(textView,params1);
 
 
         //料理名入力
@@ -56,14 +86,24 @@ public class MeasuringappMain extends Activity implements View.OnClickListener {
         edittext.setText("---");
         edittext.setTextSize(28.0f);
         edittext.setTextColor(Color.rgb(0, 0, 0));
-        layout.addView(edittext);
+        edittext.setTextSize(15);
+        edittext.setBackgroundColor(Color.rgb(200,200,200));
+        layout2.addView(edittext,params1);
 
-        //テキスト
+
+        //レイアウトの生成
+        layout3 = new LinearLayout(this);
+        layout3.setBackgroundColor(Color.WHITE);
+        layout3.setOrientation(LinearLayout.HORIZONTAL);
+        layout.addView(layout3,params);
+
+        //何人分？
         textView2 = new TextView(this);
         textView2.setText("何人分？");
         textView2.setTextSize(28.0f);
         textView2.setTextColor(Color.rgb(0, 0, 0));
-        layout.addView(textView2);
+        textView2.setTextSize(15);
+        layout3.addView(textView2,params1);
 
         //スピナーの生成
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
@@ -87,7 +127,8 @@ public class MeasuringappMain extends Activity implements View.OnClickListener {
         spinner.setSelection(0);
         spinner.setPrompt("test一覧");
         spinner.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
-        layout.addView(spinner);
+        spinner.setBackgroundColor(Color.rgb(200,200,200));
+        layout3.addView(spinner,params1);
 
         //ボタンの生成
         button = new Button(this);
