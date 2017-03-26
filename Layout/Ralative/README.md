@@ -1,25 +1,33 @@
-# AndroidLayout
+# RelativeLayout
 
-レイアウトとは、複数のウィジェットをまとめたり、どのように配置すべきかを決める為のビューです。
+RelativeLayout は前後のウィジェットの相対的な関係でもって位置を決定します。
 
-### XML
-XML は、ExtensibleMarkupLanguage の略であり、
-インターネット上で様々なデータを扱う場合に特に利点を発揮します。
-１９９８年に W３C により勧告された比較的新しい言語ですが、
-仕様が簡単であるため、広く使用されるようになりました。
+#### RelativeLayout 配下で利用出来る主なレイアウト属性
 
+	基準 
+		android:layout_below 指定したウィジェットの下に配置
+		android:layout_toLeftOf 指定したウィジェットの左に配置
+		android:layout_ toRightOf 指定したウィジェットの右に配置
 
+	配置 
+		android:layout_alignTop 基準となるウィジェットの上端に合わせる
+		android:layout_ alignBttom 基準となるウィジェットの下端に合わせる
+		android:layout_ alignLeft 基準となるウィジェットの左端に合わせる
+		android:layout_ alignRight 基準となるウィジェットの右端に合わせる
 
+	マージン 
+		android:layout_margin 上下左右の余白
+		android:layout_marginTop 上の余白
+		android:layout_marginBottom 下の余白
+		android:layout_marginLeft 左の余白
+		android:layout_marginRight 右の余白
 
-#### レイアウトの種類と概要
-	LinearLayout ウィジェットを縦/横一列に配置
-	RelativeLayout ウィジェットの位置を前後の相対位置を指定
-	AbsoluteLayout ウィジェットの位置を絶対座標で指定
-	TableLayout ウィジェットをテーブル(格子)状に配置
-	GridLayout ウィジェットをテーブル(格子)状に配置
-	FrameLayout ウィジェットを左上に重ねて配置
-
-
+	パディング 
+		android:layout_padding 上下左右のパディング
+		android:layout_paddingTop 上のパディング
+		android:layout_paddingBottom 下のパディング
+		android:layout_paddingLeft 左のパディング
+		android:layout_paddingRight 右のパディング
 
 #### ウィジェットのサイズの指定方法
 	wrap_content 
@@ -46,7 +54,6 @@ XML は、ExtensibleMarkupLanguage の略であり、
 
 	android:gravity=”left” or ”center” or ”right”
 		まとめて左右中央寄せが出来る。
-
 
 
 #### サイズに指定出来る単位
