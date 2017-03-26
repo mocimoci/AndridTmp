@@ -26,7 +26,7 @@ import android.widget.Toast;
 *
 */
 
-public class Spinner3 extends Activity implements View.OnClickListener {
+public class RadioButton_quiz extends Activity implements View.OnClickListener {
 
     private final static int WC = LinearLayout.LayoutParams.WRAP_CONTENT;
     private RadioGroup radioGroup;//ラジオグループ

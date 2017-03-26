@@ -45,12 +45,12 @@ public class Spinner extends Activity implements View.OnClickListener {
         layout.addView(textView);
 
         //スピナーの生成
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(
-                android.R.layout.simple_spinner_dropdown_item
-        );
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item);
 
+        //アダプター
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        
+        //項目
         String[] strs = {"赤", "青", "黄", "緑", "ピンク", "オレンジ"};
         for (int i = 0; i < strs.length; i++) {
             adapter.add(strs[i]);

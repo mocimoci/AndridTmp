@@ -105,11 +105,12 @@ public class Spinner2 extends Activity implements View.OnClickListener {
         spinner2.setAdapter(adapter);
         spinner2.setSelection(0);
 
+        //スピナーが選択された時の処理
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view,
-                                       int position, long id) {
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Spinner spinner = (Spinner) parent;
+                
                 // 選択されたアイテムを取得します
                 String item = (String) spinner.getSelectedItem();
                 Log.d("item:", String.valueOf(item));
