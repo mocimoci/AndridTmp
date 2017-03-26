@@ -35,3 +35,23 @@ LinearLayoutは、縦方向横方向へ指定して配置配置します
 	dp 解像度に依存しない単位。
 	sp 解像度に依存しない単位(文字サイズに利用する)。
 	px ピクセル数
+	
+	
+#### Map
+
+|xml|内容|
+|:--|:--|
+|aria_9.xml|画面を９個のさ市松模様に配置し、それぞれにHi!を表示|
+|aria_9_random.xml|画面を９個のさ市松模様に配置し、それぞれにHi!を表示Hiの位置を上下左右に指定して配置|
+|aria_all.xml|テキストビューを全画面に表示。(横方向)|
+|aria_size_dp.xml|幅に具体的な値を設定して表示。(単位 dp)|
+|aria_size_px.xml|幅に具体的な値を設定して表示。(単位 px)|
+|layout_weight.xml|テキストビューに表示幅の比率を設定して横方向に並べて表示|
+|nest.xml|縦方向の LinearLayout に横方向の LinearLayout を入れ子にして表示|
+|nest2.xml|縦方向の LinearLayout に横方向の LinearLayout を入れ子にして表示。(複数行)|
+|text_T_M_B.xml|テキストビューに上寄せ、センター寄せ、下寄せを設定して横方向に並べて表示|
+|text_center_center.xml|テキストビューを全画面に表示。(縦方向)|
+|text_horizontal.xml|テキストビューを横方向に並べて表示|
+|text_lleft_right_vertical.xml|テキストビューに対して左寄せ、センター寄せ、右寄せの設定をして縦方向に並べて表示|
+|text_vertical.xml|テキストビューを縦方向に並べて表示|
+|text_weight.xml|テキストビューに表示幅の比率を設定して縦方向に並べて表示|
