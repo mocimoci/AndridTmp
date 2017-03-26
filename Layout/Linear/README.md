@@ -12,12 +12,12 @@ XML は、ExtensibleMarkupLanguage の略であり、
 
 
 #### レイアウトの種類と概要
-	- LinearLayout ウィジェットを縦/横一列に配置
-	- RelativeLayout ウィジェットの位置を前後の相対位置を指定
-	- AbsoluteLayout ウィジェットの位置を絶対座標で指定
-	- TableLayout ウィジェットをテーブル(格子)状に配置
-	- GridLayout ウィジェットをテーブル(格子)状に配置
-	- FrameLayout ウィジェットを左上に重ねて配置
+	LinearLayout ウィジェットを縦/横一列に配置
+	RelativeLayout ウィジェットの位置を前後の相対位置を指定
+	AbsoluteLayout ウィジェットの位置を絶対座標で指定
+	TableLayout ウィジェットをテーブル(格子)状に配置
+	GridLayout ウィジェットをテーブル(格子)状に配置
+	FrameLayout ウィジェットを左上に重ねて配置
 
 
 
@@ -28,22 +28,22 @@ XML は、ExtensibleMarkupLanguage の略であり、
 
 #### android:layout_gravity 属性の設定値
 
-- horizontal 
-	- top 上寄せ
-	- center_vertical 垂直方向に中央寄せ
-	- bottom 下寄せ
+	- horizontal 
+		- top 上寄せ
+		- center_vertical 垂直方向に中央寄せ
+		- bottom 下寄せ
 
-- vertical 
-	- left 左寄せ
-	- center_horizontal 水平方向に中央寄せ
-	- right 右寄せ
+	- vertical 
+		- left 左寄せ
+		- center_horizontal 水平方向に中央寄せ
+		- right 右寄せ
 
-- android:gravity=”left” or ”center” or ”right”
-	- まとめて左右中央寄せが出来る。
+	- android:gravity=”left” or ”center” or ”right”
+		- まとめて左右中央寄せが出来る。
 
 
 
 #### サイズに指定出来る単位
-	- dp 解像度に依存しない単位。
-	- sp 解像度に依存しない単位(文字サイズに利用する)。
-	- px ピクセル数
+	dp 解像度に依存しない単位。
+	sp 解像度に依存しない単位(文字サイズに利用する)。
+	px ピクセル数
