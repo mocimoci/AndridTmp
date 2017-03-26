@@ -1,6 +1,8 @@
 # Android
 
 Androidプログラミングの色々
+17-03-26　　作成　　ローカルに保存してるデータを整理して順次上げていく予定
+
 
 #### 関連サイト
 [Android Developers：リファレンス](https://developer.android.com/reference/packages.html?hl=ja)
