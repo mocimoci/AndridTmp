@@ -9,7 +9,9 @@ XML は、ExtensibleMarkupLanguage の略であり、
 仕様が簡単であるため、広く使用されるようになりました。
 
 
-- レイアウトの種類と概要
+
+
+#### レイアウトの種類と概要
 	- LinearLayout ウィジェットを縦/横一列に配置
 	- RelativeLayout ウィジェットの位置を前後の相対位置を指定
 	- AbsoluteLayout ウィジェットの位置を絶対座標で指定
@@ -18,12 +20,13 @@ XML は、ExtensibleMarkupLanguage の略であり、
 	- FrameLayout ウィジェットを左上に重ねて配置
 
 
-- ウィジェットのサイズの指定方法
+
+#### ウィジェットのサイズの指定方法
 	- wrap_content コンテンツのサイズに合わせてウィジェットのサイズが決まります。例えば、テキストビューであれば表示するテキストの内容で幅が決まります。
 	- fill_parent,match_parent 親要素いっぱいにウィジェットのサイズが拡がります。たとえば、横幅が fill_parent が設定されている LinearLayoutの入れ子として、横幅が fill_parent が設定されているテキストビューを記述した場合、画面幅いっぱいにテキストビューが表示されます。
 
 
-- android:layout_gravity 属性の設定値
+#### android:layout_gravity 属性の設定値
 
 - horizontal 
 	- top 上寄せ
@@ -39,7 +42,8 @@ XML は、ExtensibleMarkupLanguage の略であり、
 	- まとめて左右中央寄せが出来る。
 
 
-- サイズに指定出来る単位
+
+#### サイズに指定出来る単位
 	- dp 解像度に依存しない単位。
 	- sp 解像度に依存しない単位(文字サイズに利用する)。
 	- px ピクセル数
