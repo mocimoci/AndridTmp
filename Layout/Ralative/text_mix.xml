@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- テキストビューを複雑に表示。(横幅のサイズを固定) -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_toRightOf="@+id/TextView01"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_toRightOf="@+id/TextView02"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_below="@+id/TextView04"
+        android:layout_marginLeft="360px"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+</RelativeLayout>

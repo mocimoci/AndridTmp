@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 複雑に位置を指定 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 1 -->
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="1080px"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+    <!-- 2 -->
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="720px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+    <!-- 3 -->
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+
+        android:layout_alignRight="@+id/TextView01"
+        android:layout_below="@+id/TextView02"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+    <!-- 4 -->
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView03"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+    <!-- 5 -->
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@+id/TextView04"
+        android:layout_toRightOf="@+id/TextView04"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView05"
+        android:layout_toRightOf="@+id/TextView05"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_below="@+id/TextView04"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView05"
+        android:layout_below="@+id/TextView07"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="360px"
+        android:layout_height="wrap_content"
+
+        android:layout_alignLeft="@+id/TextView06"
+        android:layout_below="@+id/TextView08"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world2"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60sp"
+        android:textStyle="normal" />
+</RelativeLayout>

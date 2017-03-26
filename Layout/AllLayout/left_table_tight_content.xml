@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 左にTableを配置
+     右カラムに本部のとサムネイルを表示 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#f0f8ff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/title"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="#f5fffa"
+            android:orientation="vertical">
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="0,1,2">
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:background="#cccccc"
+                    android:textColor="#000000">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/no"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/naming"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/address"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow android:id="@+id/tableRow2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="山田" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="東京" />
+                </TableRow>
+
+                <TableRow android:id="@+id/tableRow3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="鈴木" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="神奈川" />
+                </TableRow>
+
+                <TableRow android:id="@+id/tableRow4">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="近藤" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#ffffff"
+                        android:text="埼玉" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TextView02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:shadowColor="#00ff00"
+                    android:shadowDx="3.0"
+                    android:shadowDy="5.0"
+                    android:shadowRadius="2.0"
+                    android:text="@string/header"
+                    android:textColor="#333333"
+                    android:textColorHighlight="#00ff00"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:padding="3dip"
+                    android:text="@string/honbun"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:id="@+id/ImageView01"
+                    android:layout_width="150px"
+                    android:layout_height="102px"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/s_scene" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="5dip"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left"
+                    android:text="@string/honbun"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- セルにマージンとパディングを設定して３列で折り返してテキストビューを表示 -->
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_columnWeight="1"
+        android:layout_margin="5dip"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:padding="20dip"
+        android:text="@string/hello_world2" />
+</GridLayout>

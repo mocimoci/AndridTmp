@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 画面上部にタイトルエリアを設けた上で、
+     メインエリアにGridをスクロールで設置 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#f0f8ff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/title"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+
+        <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="5dip"
+                android:background="#cccccc"
+                android:gravity="center"
+                android:padding="20dip"
+                android:text="@string/text" />
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>
