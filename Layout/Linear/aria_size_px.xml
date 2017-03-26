@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 幅に具体的な値を設定して表示。(単位 px) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+</LinearLayout>

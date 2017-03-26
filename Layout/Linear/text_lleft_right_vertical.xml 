@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- テキストビューに対して左寄せ、センター寄せ、右寄せの設定をして縦方向に並べて表示。
+
+android:layout_gravity 属性の設定値
+    horizontal top 上寄せ
+    center_vertical 垂直方向に中央寄せ
+    bottom 下寄せ
+    vertical left 左寄せ
+    center_horizontal 水平方向に中央寄せ
+
+※android:layout_gravit=”left” or ”center” or ”right”
+まとめて左右中央寄せが出来る。 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:shadowColor="#00ff00"
+        android:shadowDx="3.0"
+        android:shadowDy="5.0"
+        android:shadowRadius="2.0"
+        android:text="@string/hello_world"
+        android:textColor="#333333"
+        android:textColorHighlight="#00ff00"
+        android:textSize="60px"
+        android:textStyle="normal" />
+    
+</LinearLayout>
