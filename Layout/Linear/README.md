@@ -43,4 +43,3 @@ XML は、ExtensibleMarkupLanguage の略であり、
 * dp 解像度に依存しない単位。
 * sp 解像度に依存しない単位(文字サイズに利用する)。
 * px ピクセル数
-
