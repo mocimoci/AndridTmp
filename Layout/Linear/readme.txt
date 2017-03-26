@@ -7,6 +7,7 @@ XML は、ExtensibleMarkupLanguage の略であり、インターネット上で
 扱う場合に特に利点を発揮します。１９９８年に W３C により勧告された比較的新しい言
 語ですが、仕様が簡単であるため、広く使用されるようになりました。
 
+
 - レイアウトの種類と概要
 * LinearLayout ウィジェットを縦/横一列に配置
 * RelativeLayout ウィジェットの位置を前後の相対位置を指定
@@ -36,3 +37,9 @@ XML は、ExtensibleMarkupLanguage の略であり、インターネット上で
 
 * android:gravity=”left” or ”center” or ”right”
 ** まとめて左右中央寄せが出来る。
+
+
+- サイズに指定出来る単位
+* dp 解像度に依存しない単位。
+* sp 解像度に依存しない単位(文字サイズに利用する)。
+* px ピクセル数
