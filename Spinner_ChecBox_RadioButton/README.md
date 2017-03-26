@@ -9,8 +9,45 @@ XML は、ExtensibleMarkupLanguage の略であり、
 仕様が簡単であるため、広く使用されるようになりました。
 
 
+#### Spinner
+~~~java
+//（１）スピナーを定義する ------------------------------
+private android.widget.Spinner spinner;//スピナー
 
+//（２）中身を作る -----------------------------------------
+//スピナーの生成
+ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        this, android.R.layout.simple_spinner_item);
+adapter.setDropDownViewResource(
+        android.R.layout.simple_spinner_dropdown_item
+);
 
+String[] strs = {"赤", "青", "黄"};
+for (int i = 0; i < strs.length; i++) {
+    adapter.add(strs[i]);
+}
+
+spinner = new android.widget.Spinner(this);
+spinner.setAdapter(adapter);
+spinner.setSelection(0);
+spinner.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
+layout.addView(spinner);
+
+//（３）ボタンが押されたら判定する ------------------------------
+public void onClick(View v) {
+
+    //スピナーの状態取得
+    String selectedSpinner = (String) spinner.getSelectedItem();
+    Log.d("onClick", String.valueOf("selectedSpinner:" + selectedSpinner));
+    if (selectedSpinner.equals("赤")) {
+        layout.setBackgroundColor(Color.RED);
+    } else if (selectedSpinner.equals("青")) {
+        layout.setBackgroundColor(Color.BLUE);
+    } else if (selectedSpinner.equals("黄")) {
+        layout.setBackgroundColor(Color.YELLOW);
+    }
+}
+~~~
 #### スピナーが選択された時の処理
 ~~~java
 spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
