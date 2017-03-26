@@ -31,29 +31,99 @@ spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
 
 
 #### ChecBox
-	wrap_content 
-		コンテンツのサイズに合わせてウィジェットのサイズが決まります。
-		例えば、テキストビューであれば表示するテキストの内容で幅が決まります。
-	fill_parent,match_parent 
-		親要素いっぱいにウィジェットのサイズが拡がります。
-		たとえば、横幅が fill_parent が設定されている LinearLayoutの入れ子として、
-		横幅が fill_parent が設定されているテキストビューを記述した場合、
-		画面幅いっぱいにテキストビューが表示されます。
+~~~java
+//（１）チェックボックスを定義する ------------------------------
+private android.widget.CheckBox checkBox1;//チェックボックス
+private android.widget.CheckBox checkBox2;//チェックボックス
+
+//（２）中身を作る -----------------------------------------
+//チェックボックスの生成
+checkBox1 = new android.widget.CheckBox(this);
+checkBox1.setText("イタリア");
+checkBox1.setTextColor(Color.rgb(0, 0, 0));
+checkBox1.setChecked(false);
+checkBox1.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
+layout.addView(checkBox1);
+
+checkBox2 = new android.widget.CheckBox(this);
+checkBox2.setText("アメリカ");
+checkBox2.setTextColor(Color.rgb(0, 0, 0));
+checkBox2.setChecked(false);
+checkBox2.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
+layout.addView(checkBox2);
+
+//（３）ボタンが押されたら判定する ------------------------------
+@Override
+public void onClick(View v) {
+    //チェックボックス状態取得
+    boolean chk1 = checkBox1.isChecked();
+    boolean chk2 = checkBox2.isChecked();
+
+    //チェック結果メッセージ
+    String msg = "";
+
+    //チェック判定
+    if (chk1 == true) {
+        msg = "イタリア";
+    }
+    if (chk2 == true) {
+        if (msg.equals("")) {
+            msg = "アメリカ";
+        } else {
+            msg += ",アメリカ";
+        }
+    }
+    MessageDialog.show(this, "行きたい国", msg);
+}
+~~~
 
 
 
 #### RadioButton
 
-	horizontal 
-		top 上寄せ
-		center_vertical 垂直方向に中央寄せ
-		bottom 下寄せ
+~~~java
+//（１）ラジオグループを定義する ------------------------------
+private RadioGroup radioGroup;//ラジオグループ
 
-	vertical 
-		left 左寄せ
-		center_horizontal 水平方向に中央寄せ
-		right 右寄せ
+//（２）中身を作る -----------------------------------------
+//ラジオボタン０の生成
+RadioButton radio0 = new RadioButton(this);
+radio0.setId(1);
+radio0.setText("オバマ");
+radio0.setTextColor(Color.rgb(0, 0, 0));
 
-	android:gravity=”left” or ”center” or ”right”
-		まとめて左右中央寄せが出来る。
+//ラジオボタン２の生成
+RadioButton radio1 = new RadioButton(this);
+radio1.setId(2);
+radio1.setText("西川のりお");
+radio1.setTextColor(Color.rgb(0, 0, 0));
+
+//ラジオボタン３の生成
+RadioButton radio2 = new RadioButton(this);
+radio2.setId(3);
+radio2.setText("タイガーマスク");
+radio2.setTextColor(Color.rgb(0, 0, 0));
+
+//ラジオグループの生成
+radioGroup = new RadioGroup(this);
+radioGroup.addView(radio0);
+radioGroup.addView(radio1);
+radioGroup.addView(radio2);
+radioGroup.clearCheck();
+radioGroup.check(1);
+radioGroup.setOnClickListener(this);
+radioGroup.setLayoutParams(new LinearLayout.LayoutParams(WC, WC));
+layout.addView(radioGroup);
+
+
+//（３）ボタンが押されたら判定する ------------------------------
+//一問目回答
+if (radioGroup.getCheckedRadioButtonId() == 1) {
+    //正解
+    MessageDialog.show(this, "クイズ問題１", "正解です");
+} else {
+    //不正解
+    MessageDialog.show(this, "クイズ問題１", "不正解です");
+}
+~~~
 
