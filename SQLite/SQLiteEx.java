@@ -28,7 +28,6 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
     private SQLiteDatabase db;      //データベースオブジェクト
 
 
-    
     //アクティビティ起動時に呼ばれる
     @Override
     public void onCreate(Bundle bundle) {
@@ -51,13 +50,12 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
         layout.addView(makeButton("書き込み", TAG_WRITE));
         layout.addView(makeButton("読み込み", TAG_READ));
 
-        //データベースオブジェクトの取得(5)
+        //データベースオブジェクトの取得
         DBHelper dbHelper = new DBHelper(this);
         db = dbHelper.getWritableDatabase();
     }
 
     
-
     //ボタンの生成
     private Button makeButton(String text, String tag) {
         Button button = new Button(this);
@@ -69,7 +67,6 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
     }
 
 
-    
     //ボタンクリックイベントの処理
     public void onClick(View v) {
         String tag = (String)v.getTag();
@@ -94,7 +91,6 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
     }
 
 
-    
     //データベースへの書き込み
     private void writeDB(String info) throws Exception {
         ContentValues values = new ContentValues();
@@ -104,19 +100,17 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
         if (colNum == 0) db.insert(DB_TABLE, "", values);
     }
 
-
     
     //データベースからの読み込み
     private String readDB() throws Exception {
-        Cursor c = db.query(DB_TABLE, new String[]{"id", "info"},
-                "id='0'", null, null, null, null);
+        Cursor c = db.query(DB_TABLE, new String[]{"id", "info"},"id='0'", null, null, null, null);
+        
         if (c.getCount() == 0) throw new Exception();
         c.moveToFirst();
         String str = c.getString(1);
         c.close();
         return str;
     }
-
 
     
     //データベースヘルパーの定義
@@ -129,14 +123,12 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
         //データベースの生成
         @Override
         public void onCreate(SQLiteDatabase db) {
-            db.execSQL("create table if not exists "+
-                    DB_TABLE+"(id text primary key,info text)");
+            db.execSQL("create table if not exists "+DB_TABLE+"(id text primary key,info text)");
         }
 
         //データベースのアップグレード
         @Override
-        public void onUpgrade(SQLiteDatabase db,
-                              int oldVersion, int newVersion) {
+        public void onUpgrade(SQLiteDatabase db,int oldVersion, int newVersion) {
             db.execSQL("drop talbe if exists "+DB_TABLE);
             onCreate(db);
         }
