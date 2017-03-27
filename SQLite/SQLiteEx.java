@@ -24,8 +24,8 @@ public class SQLiteEx extends Activity implements View.OnClickListener {
     private final static String DB_TABLE   = "test";   //テーブル名
     private final static int    DB_VERSION = 1;        //バージョン
 
-    private EditText       editText;//エディットテキスト
-    private SQLiteDatabase db;      //データベースオブジェクト
+    private EditText editText;  //エディットテキスト
+    private SQLiteDatabase db;  //データベースオブジェクト
 
 
     //アクティビティ起動時に呼ばれる
