@@ -229,25 +229,45 @@ sqlite> select * from pason;
 
 ## Android 端末内の SQLite の操作 (Mac編)
 
-SQLite3が入ってるのを確認したら
+1. Android SDKの格納場所を確認する
+> Android Studio File > Other Settings > Default Setting Structure…
+
+2. Android SDKのパスを、bash_profileに書き込む
+
+bash_profileをターミナルで開く
 ~~~java
-$ sqlite3 -version
-3.8.10.2 2015-05-20 18:17:19 2ef4f3a5b1d1d0c4338f8243d40a2452cc1f7fe4
+$vi ~/.bash_profile
 ~~~
 
-そのまま入る！
+ＡｎｄｒｏｉｄStudioで確認した/Library/Android/sdk のパスを書いて閉じる
 ~~~java
-$ sqlite3 com.hogehoge
-SQLite version 3.8.10.2 2015-05-20 18:17:19
-Enter ".help" for usage hints.
-sqlite> 
+export PATH=$PATH:/Users/furusin/Library/Android/sdk/platform-tools
+// esc :wq
 ~~~
 
-あとはだいたい同じ
+3. ターミナルをexitで閉じて再度開く
+
+adbとうって、command not foundにならなければ成功！
 ~~~java
-sqlite> .database  // 現在接続してるDBとファイルの保存場所を確認
-sqlite> .quit  // SQLiteを終了する
-sqlite> .exit  // SQLiteを終了する
-sqlite> .help  // コマンドの一覧
-sqlite> .table  // テーブルの一覧
+$ adb
+Android Debug Bridge version 1.0.36
+Revision 302830efc153-android
+//以下略
+~~~
+
+4. あとはほぼ同じ！
+
+~~~
+$ adb shell   //
+$ run-as com.hogehoge   //Androidのパッケージに入る
+$ pwd   //カレントディレクトリを調べる
+$ ls -la   //フォルダ、ファイルを一覧表示
+$ cd databases   //databases フォルダに移動
+$ ls -l   //フォルダ、ファイルを一覧表示
+$ sqlite3 test.db   //特定のDBに入る
+
+sqlite> .tables   //存在するテーブルの確認
+sqlite> .schema test   //.schema テーブル名、でテーブルの構成を確認
+sqlite> select * from test;   //テーブルの中身を確認
+sqlite> .exit   //終了
 ~~~
