@@ -38,6 +38,96 @@ Android / iPhoneで使われている
 |UNIQUE|重複した値を格納した場合はエラーになる|
 |AUTOINCREMENT|生成時に自動で値をナンバリングする|
 
+## SQLiteの使い方
+
+1. Androidでデータベースにアクセスするには、SQLiteOpenHelperクラスを継承したクラス<br>「データベースヘルパー！」を定義する。<br>ヘルパーはDBの生成とアップグレードを管理してくれる。
+
+|オーバーライドするメソッド|メソッドの呼び出し|
+|:------|:------------------|
+|onCreate()メソッド|データベース生成時に呼ばれる|
+|onUpgrade()メソッド|データベースアップグレード時に呼ばれる|
+
+2. 各種変数を定義する
+
+~~~java
+private final static String DB_NAME    = "test.db";//DB名
+private final static String DB_TABLE   = "test";   //テーブル名
+private final static int    DB_VERSION = 1;        //バージョン
+private SQLiteDatabase db;  //データベースオブジェクト
+~~~
+
+3. onCreate内でデータベースオブジェクトを取得
+
+~~~java
+//データベースオブジェクトの取得
+DBHelper dbHelper = new DBHelper(this);
+db = dbHelper.getWritableDatabase();
+~~~
+
+4. onClick内で書き込みと読み込み（trycatchで囲う）
+~~~java
+//TAG_WRITEが押された多DBへの書き込み
+String str = editText.getText().toString();
+writeDB(str);
+        
+//TAG_READが押されたらDBからの読み込み
+String str = readDB();
+editText.setText(str);
+~~~
+
+~~~java
+//書き込み用のwriteDBメソッド
+private void writeDB(String info) throws Exception {
+    ContentValues values = new ContentValues();
+    values.put("id", "0");
+    values.put("info", info);
+    int colNum = db.update(DB_TABLE, values, null, null);
+    if (colNum == 0) db.insert(DB_TABLE, "", values);
+}
+~~~
+
+~~~java
+//読み込み用のreadDBメソッド
+private String readDB() throws Exception {
+    Cursor c = db.query(DB_TABLE, new String[]{"id", "info"},"id='0'", null, null, null, null);
+    
+    if (c.getCount() == 0) throw new Exception();
+    c.moveToFirst();
+    String str = c.getString(1);
+    c.close();
+    return str;
+}
+~~~
+
+5. データベースヘルパー登場！<br>DBの生成時には、onCreateメソッドが呼ばれ、execSQLメソッドでSQLの命令文が実行される。<br>アップグレードの場合は、dropで削除した後にonCreateを呼び出して新しく作成
+
+~~~java
+//データベースヘルパーの定義
+private static class DBHelper extends SQLiteOpenHelper {
+    //データベースヘルパーのコンストラクタ
+    //①コンテキスト②DBファイル名③ファクトリー④ヴァージョン
+    public DBHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
+    }
+
+    //データベースの生成時にこのonCreateメソッドが呼ばれる
+    @Override
+    public void onCreate(SQLiteDatabase db) {
+        db.execSQL("create table if not exists "+DB_TABLE+"(id text primary key,info text)");
+    }
+
+    //データベースのアップグレード
+    //onUpgradeの引数　①DBオブジェクト②旧バージョン番号③新バージョン番号
+    @Override
+    public void onUpgrade(SQLiteDatabase db,int oldVersion, int newVersion) {
+        db.execSQL("drop talbe if exists "+DB_TABLE);
+        onCreate(db);
+    }
+}
+~~~
+
+ 
+
 ## Android 端末内の SQLite の操作
 
 1. エミュレータを起動(起動しないと中に入れない)
