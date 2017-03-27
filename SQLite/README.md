@@ -51,8 +51,8 @@ generic_x86_64:/data/data/com.hogehoge/databases $
 ~~~java
 generic_x86_64:/data/data/com.hogehoge/databases $ ls -l
 total 64
--rw-rw---- 1 u0_a109 u0_a109 20480 2017-03-27 01:30 test.db
--rw------- 1 u0_a109 u0_a109  8720 2017-03-27 01:30 test.db-journal
+-rw-rw---- 1 ●●●● ●●●● ●●●● 2017-03-27 01:30 test.db
+-rw------- 1 ●●●● ●●●● ●●●● 2017-03-27 01:30 test.db-journal
 ~~~
 9. sqlite3 test.dbで、特定のデータベースを指定して、データベースを開く
 sqlite>が表示されれば成功！
