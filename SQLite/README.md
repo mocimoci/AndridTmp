@@ -239,7 +239,7 @@ sqlite> select * from pason;
 $vi ~/.bash_profile
 ~~~
 
-3. ＡｎｄｒｏｉｄStudioで確認した/Library/Android/sdk のパスを書いて閉じる
+3. AndroidStudioで確認した/Library/Android/sdk のパスを書いて閉じる
 
 ~~~java
 export PATH=$PATH:/Users/furusin/Library/Android/sdk/platform-tools
