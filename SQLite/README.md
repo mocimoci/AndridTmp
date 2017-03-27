@@ -3,6 +3,8 @@
 データベースを操作する言語の無料簡易版<br>
 Android / iPhoneで使われている
  
+ 保存先は
+ /data/data/パッケージ名/databases/データベースファイル名
  
 <br><br><br>
 
@@ -80,36 +82,23 @@ sqlite> sqlite3 test
 ~~~
 13. テーブルの作成
 ~~~java
-drop emp1;
-CREATE TABLE emp1 (
-_id integer primary key autoincrement,
-emp_name text not null,
-dep_no integer not null,
-saraly integer not null);
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (1, 'sam', '101', '350000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (2, 'michal', '101', '330000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (3, 'mika', '101', '340000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (4, 'jyun', '102', '280000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (5, 'ichiro', '102', '260000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (6, 'yasu', '201', '320000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (7, 'toranpu', '201',
-'300000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (8, 'yama', '201', '290000' ) ;
-insert into emp1 ( _id, emp_name, dep_no, saraly ) values (9, 'joe', '202', '250000' ) ;
-drop dep1;
-CREATE TABLE dep1 (
-dep_no integer primary key,
-dep_name text not null);
-insert into dep1 ( dep_no, dep_name ) values ( 101, 'sales' ) ;
-insert into dep1 ( dep_no, dep_name ) values ( 102, 'develop' ) ;
-insert into dep1 ( dep_no, dep_name ) values ( 201, 'personal' ) ;
-insert into dep1 ( dep_no, dep_name ) values ( 202, 'planning' ) ;
+create table pason(id integer, name text);
+insert into pason values(1, 'Shiga');
+insert into pason values(2, 'Tokyo');
+insert into pason values(3,'Kyoto');
 ~~~
-14. 終了
+14.テーブルの情報確認
+~~~java
+//構成
+sqlite> .schema pason
+CREATE TABLE pason(id integer, name text);
+//中身
+sqlite> select * from pason;
+1|Shiga
+2|Tokyo
+3|Kyoto
+~~~
+15. 終了
 ~~~java
 .exit
-~~~
-
-~~~java
-
 ~~~
