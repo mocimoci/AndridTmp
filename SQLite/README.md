@@ -7,7 +7,7 @@ Android / iPhoneで使われている
  /data/data/パッケージ名/databases/データベースファイル名<br><br><br>
  
 
-### Android 端末内の SQLite の操作
+## Android 端末内の SQLite の操作
 
 1. エミュレータを起動(起動しないと中に入れない)
 ~~~java
