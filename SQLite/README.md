@@ -4,7 +4,8 @@
 Android / iPhoneで使われている
  
  保存先は<br>
- /data/data/パッケージ名/databases/データベースファイル名
+ /data/data/パッケージ名/databases/データベースファイル名<br>
+ アプリケーションをアンインストールするとファイルとして作成したデータベースも自動的に削除される
 
 
 ### SQLite主な命令
