@@ -226,3 +226,28 @@ sqlite> select * from pason;
 ~~~java
 .exit
 ~~~
+
+## Android 端末内の SQLite の操作 (Mac編)
+
+SQLite3が入ってるのを確認したら
+~~~java
+$ sqlite3 -version
+3.8.10.2 2015-05-20 18:17:19 2ef4f3a5b1d1d0c4338f8243d40a2452cc1f7fe4
+~~~
+
+そのまま入る！
+~~~java
+$ sqlite3 com.hogehoge
+SQLite version 3.8.10.2 2015-05-20 18:17:19
+Enter ".help" for usage hints.
+sqlite> 
+~~~
+
+あとはだいたい同じ
+~~~java
+sqlite> .database  // 現在接続してるDBとファイルの保存場所を確認
+sqlite> .quit  // SQLiteを終了する
+sqlite> .exit  // SQLiteを終了する
+sqlite> .help  // コマンドの一覧
+sqlite> .table  // テーブルの一覧
+~~~
