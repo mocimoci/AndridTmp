@@ -38,9 +38,11 @@ Android / iPhoneで使われている
 |UNIQUE|重複した値を格納した場合はエラーになる|
 |AUTOINCREMENT|生成時に自動で値をナンバリングする|
 
+<br>
+ 
 ## SQLiteの使い方
 
-1. Androidでデータベースにアクセスするには、SQLiteOpenHelperクラスを継承したクラス<br>「データベースヘルパー！」を定義する。<br>ヘルパーはDBの生成とアップグレードを管理してくれる。
+1. Androidでデータベースにアクセスするには、SQLiteOpenHelperクラスを継承したクラス「データベースヘルパー！」を定義する。<br>ヘルパーはDBの生成とアップグレードを管理してくれる。
 
 |オーバーライドするメソッド|メソッドの呼び出し|
 |:------|:------------------|
@@ -126,7 +128,7 @@ private static class DBHelper extends SQLiteOpenHelper {
 }
 ~~~
 
- 
+<br>
 
 ## Android 端末内の SQLite の操作
 
