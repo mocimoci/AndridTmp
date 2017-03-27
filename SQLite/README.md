@@ -257,8 +257,8 @@ Revision 302830efc153-android
 
 4. あとはほぼ同じ！
 
-~~~
-$ adb shell   //
+~~~java
+$ adb shell
 $ run-as com.hogehoge   //Androidのパッケージに入る
 $ pwd   //カレントディレクトリを調べる
 $ ls -la   //フォルダ、ファイルを一覧表示
