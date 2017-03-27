@@ -29,7 +29,7 @@ generic_x86_64:/data/data/com.hogehoge $
 5. 入れたらpwd コマンドでカレントディレクトリを調べる
 ~~~java
 generic_x86_64:/data/data/com.hogehoge $ pwd
-/data/data/com.mgt.android2016.keiryouapp
+/data/data/com.hogehoge
 ~~~
 6. ls コマンドでカレントディレクトリのフォルダ、ファイルを一覧表示
 ~~~java
@@ -48,7 +48,7 @@ generic_x86_64:/data/data/com.hogehoge/databases $
 8. ls コマンドでカレントディレクトリのフォルダ、ファイルを一覧表示<br>
 ※拡張子「db」がデータベース
 ~~~java
-generic_x86_64:/data/data/com.mgt.android2016.sqllite/databases $ ls -l
+generic_x86_64:/data/data/com.hogehoge/databases $ ls -l
 total 64
 -rw-rw---- 1 u0_a109 u0_a109 20480 2017-03-27 01:30 test.db
 -rw------- 1 u0_a109 u0_a109  8720 2017-03-27 01:30 test.db-journal
@@ -56,7 +56,7 @@ total 64
 9. sqlite3 test.dbで、特定のデータベースを指定して、データベースを開く
 sqlite>が表示されれば成功！
 ~~~java
-generic_x86_64:/data/data/com.mgt.android2016.sqllite/databases $ sqlite3 test.db
+generic_x86_64:/data/data/com.hogehoge/databases $ sqlite3 test.db
 SQLite version 3.9.2 2015-11-02 18:31:45
 Enter ".help" for usage hints.
 sqlite>
