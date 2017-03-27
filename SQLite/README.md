@@ -230,24 +230,24 @@ sqlite> select * from pason;
 ## Android 端末内の SQLite の操作 (Mac編)
 
 1. Android SDKの格納場所を確認する
+
 > Android Studio File > Other Settings > Default Setting Structure…
 
-2. Android SDKのパスを、bash_profileに書き込む
+2. Android SDKのパスを、bash_profileに書き込む<br>bash_profileをターミナルで開く
 
-bash_profileをターミナルで開く
 ~~~java
 $vi ~/.bash_profile
 ~~~
 
-ＡｎｄｒｏｉｄStudioで確認した/Library/Android/sdk のパスを書いて閉じる
+3. ＡｎｄｒｏｉｄStudioで確認した/Library/Android/sdk のパスを書いて閉じる
+
 ~~~java
 export PATH=$PATH:/Users/furusin/Library/Android/sdk/platform-tools
 // esc :wq
 ~~~
 
-3. ターミナルをexitで閉じて再度開く
+4. ターミナルをexitで閉じて再度開く。<br>adbとうって、command not foundにならなければ成功！
 
-adbとうって、command not foundにならなければ成功！
 ~~~java
 $ adb
 Android Debug Bridge version 1.0.36
@@ -255,7 +255,7 @@ Revision 302830efc153-android
 //以下略
 ~~~
 
-4. あとはほぼ同じ！
+5. あとはほぼ同じ！
 
 ~~~java
 $ adb shell
