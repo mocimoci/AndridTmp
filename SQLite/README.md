@@ -84,7 +84,7 @@ sqlite> sqlite3 test
 create table pason(id integer, name text);
 insert into pason values(1, 'Shiga');
 insert into pason values(2, 'Tokyo');
-insert into pason values(3,'Kyoto');
+insert into pason values(3, 'Kyoto');
 ~~~
 14.テーブルの情報確認
 ~~~java
