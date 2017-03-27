@@ -7,10 +7,7 @@ Android / iPhoneで使われている
 > /data/data/パッケージ名/databases/データベースファイル名<br>
 
 アプリケーションをアンインストールするとファイルとして作成したデータベースも自動的に削除される。
-削除はAndroid SDKのDDMS（Dalvik Debug Monitor Service）からではなく、<br>
-Androidエミュレータの［Manage Applications］から行うこと。<br>
-DDMSからアプリの削除を行うと、アプリケーションが作成したデータベースやファイルが<br>
-削除ないので、注意が必要。
+削除はAndroid SDKのDDMS（Dalvik Debug Monitor Service）からではなく、Androidエミュレータの［Manage Applications］から行うこと。DDMSからアプリの削除を行うと、アプリケーションが作成したデータベースやファイルが削除ないので、注意が必要。
 
 ### SQLite主な命令
 
