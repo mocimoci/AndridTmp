@@ -4,7 +4,7 @@
 Android / iPhoneで使われている
  
  保存先は<br>
- /data/data/パッケージ名/databases/データベースファイル名<br>
+ /data/data/パッケージ名/databases/データベースファイル名<br><br><br>
  
 
 ### Android 端末内の SQLite の操作
