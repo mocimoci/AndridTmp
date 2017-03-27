@@ -47,7 +47,7 @@ Android / iPhoneで使われている
 1. Androidでデータベースにアクセスするには、SQLiteOpenHelperクラスを継承したクラス「データベースヘルパー」を定義する。ヘルパーはDBの生成とアップグレードを管理してくれる。SQLiteOpenHelperクラスのonCreate()とonUpgrade()をオーバーライドする。
 
 ~~~java
-onCreate()メソッド     //データベース生成時に呼ばれる<br>
+onCreate()メソッド     //データベース生成時に呼ばれる
 onUpgrade()メソッド    //データベースアップグレード時に呼ばれる
 ~~~
 
