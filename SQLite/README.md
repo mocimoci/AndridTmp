@@ -35,10 +35,22 @@ Android / iPhoneで使われている
 |制約|説明|
 |:------|:------------------|
 |PRIMARY_KEY|テーブルの主キー|
+|FOREIGN_KEY|参照関係を作るための外部キー|
 |NOT NULL|NULLを保存するとエラーになる|
 |DEFAULT|生成時に指定されない場合のデフォルト値を設定|
 |UNIQUE|重複した値を格納した場合はエラーになる|
 |AUTOINCREMENT|生成時に自動で値をナンバリングする|
+
+~~~java
+//外部キー設定ON
+sqlite> pragma foreign_keys = ON;
+~~~
+
+[・ロボット【Pepper】SQLite外部キー制約の有効化](http://systrabot.com/?p=2203)<br>
+[・SQLite テーブルの外部キー](https://jp.navicat.com/manual/online_manual/jp/navicat/linux_manual/ForeignKeysSQLite.html)<br>
+[・SQLiteに関するあれこれ（制約など）](http://monoworks.co.jp/dev/android_develop_memo_2015093001/)<br>
+[・SQLite Foreign Key Support](https://www.sqlite.org/foreignkeys.html)<br>
+[・SQLITEで外部キー制約(FOREIGN KEY)が効かない時](https://laravel10.wordpress.com/2015/02/24/sqlite-%E3%81%A7%E5%A4%96%E9%83%A8%E3%82%AD%E3%83%BC%E5%88%B6%E7%B4%84foreign-key%E3%81%8C%E5%8A%B9%E3%81%8B%E3%81%AA%E3%81%84%E6%99%82/)
 
 <br>
  
