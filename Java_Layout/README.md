@@ -50,6 +50,12 @@ setContentView(layout);
 	layout.addView(textView);
 ~~~
 
+#### EditText入力域に、ヒントテキストを入れる
+
+~~~java
+edittext.setHint("書き込むと消えるテキスト");
+~~~
+
 #### テキストビューの周りにマージンを指定して表示。(横幅のサイズを固定)
 
 ~~~java
@@ -98,7 +104,6 @@ params2.setMargins(10,10,10,10);
 textView3.setLayoutParams(params2);
 layout.addView(textView3);
 ~~~
-
 
 #### テキストビューに表示幅の比率を設定して縦方向に並べて表示
 
