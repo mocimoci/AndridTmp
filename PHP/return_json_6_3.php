@@ -1,4 +1,7 @@
 <?php
+
+//php_db_Server.javaに連動
+
         $json = array(
         'work'=>array (array('name'=>'Google', 'url'=>'abc'),
         array('name'=>'Yahoo!', 'url'=>'xyz'))
