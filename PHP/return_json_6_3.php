@@ -4,7 +4,7 @@
 
         $json = array(
         'work'=>array (array('name'=>'Google', 'url'=>'abc'),
-        array('name'=>'Yahoo!', 'url'=>'xyz'))
+                array('name'=>'Yahoo!', 'url'=>'xyz'))
         );
 
         //動的に生成した配列
