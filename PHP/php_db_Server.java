@@ -13,7 +13,9 @@ import android.widget.TextView;
 import org.json.JSONArray;
 import org.json.JSONObject;
 /*
- *
+ * 
+ * PHP で動的に生成された配列を JSON に変換されて、Android の Java が分解して取得
+ * 
  * 自分で作った PHP から JSON を返してもらい受け取る
  * 動的に作った JSON を受け取る
  *
